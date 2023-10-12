@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  
+}
+
+

@@ -1,0 +1,211 @@
+.RightSide {
+    flex: 1;
+    width: auto;
+    border: 1px solid #ccc;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+  
+  }
+  
+  .RightSide .Header {
+    width: 100%;
+    /* height: 60px; */
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  .Header .HeaderItem {
+    padding: 10px;
+    cursor: pointer;
+    font-size: medium;
+  }
+  .Header .HeaderItem:hover {
+    font-size: large;
+  }
+  
+  .ImageCatalogs {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    height: 90vh;
+  }
+  
+  .ImageCatalogs .Item {
+    width: 150px;
+    height: 150px;
+    /* aspect-ratio: 1; */
+    border: 1px solid #ccc;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .ImageCatalogs .Item .Image {
+    width: 150px;
+    height: 150px;
+  }
+  .ImageCatalogs .Item:hover .ImageOverlay {
+    bottom: 0;
+    height: 100%;
+  }
+  .ImageOverlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008cba;
+    opacity: 0.7;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: 0.5s ease;
+  }
+  
+  .ImageOverlay .ButtonDownload {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .ImageOverlay .ButtonDelete {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .ImageOverlay .ButtonView {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+    user-select: none;
+  }
+  .ImageOverlay .ButtonDownload:hover {
+    color: rgb(4, 255, 0);
+  }
+  .ImageOverlay .ButtonDelete:hover {
+    color: rgb(255, 0, 85);
+  }
+  .ImageOverlay .ButtonView:hover {
+    color: rgb(0, 30, 255);
+  }
+  
+  .FileCatalogs {
+    padding: 5px;
+    width: 100%;
+    height: 90vh;
+    box-sizing: border-box;
+    overflow-y: scroll;
+  }
+  
+  .FileCatalogs .Item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px dashed #ccc;
+  }
+  
+  .FileCatalogs .ItemHead {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    font-size: small;
+    font-style: italic;
+    user-select: none;
+    min-width: 60px;
+    text-align: start;
+  
+  }
+  
+  .FileCatalogs .ItemName {
+    flex: 1;
+  }
+  
+  .FileCatalogs .ItemName{
+    text-align: start;
+    padding: 0 10px;
+  }
+  
+  .FileCatalogs .ItemDownload{
+    padding-right: 10px;
+    color: green;
+    cursor: pointer;
+    user-select: none;
+  
+  }
+  
+  .FileCatalogs .ItemDelete{
+    padding-right: 10px;
+    color: rgb(215, 26, 26);
+    cursor: pointer;
+    user-select: none;
+  
+  }
+  
+  .FileCatalogs .ItemDownload:hover{
+    color: rgb(43, 228, 43);
+  }
+  .FileCatalogs .ItemDelete:hover{
+    color: rgb(238, 125, 125);
+  }
+  
+  .LinkCatalogs {
+    padding: 5px;
+    width: 100%;
+    height: 90vh;
+    box-sizing: border-box;
+    overflow-y: scroll;
+  }
+  
+  .LinkCatalogs .Item{
+    width: 100%;
+    text-align: start;
+    padding:5px;
+    color: blue;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 7px;
+  }
+  
+  .LinkCatalogs .Item:hover{
+    color: rgb(103, 103, 254);
+  
+  }
+  .LinkCatalogs .Item a{
+    text-decoration: none;
+  }

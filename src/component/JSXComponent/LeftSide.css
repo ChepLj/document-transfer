@@ -1,0 +1,138 @@
+.LeftSide {
+    border: 1px solid #ccc;
+    width: 40%;
+    min-width: 500px;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    z-index: 10;
+    padding-bottom: 2px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: white;
+  }
+  .LeftSide .Contents {
+    /* border: 1px dashed red; */
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 90%;
+  }
+  .LeftSide .Contents .List {
+    /* background-color: #ccc; */
+    /* border: 1px solid #ccc; */
+    height: 100%;
+    /* padding-bottom: 10px; */
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding-left: 20px;
+    margin: 0;
+  }
+  .LeftSide .List .Item {
+    list-style: none;
+    border-bottom: 1px dashed #ccc;
+  }
+
+  .LeftSide .FooterItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .LeftSide .Item .TextContainer {
+    text-align: start;
+  }
+  .LeftSide .Item .TimeStamp {
+    font-style: italic;
+    font-size: 8px;
+    margin: 3px;
+    color: #ccc;
+    user-select: none;
+    flex: 1;
+ 
+  }
+  .LeftSide .Item .DeleteButton {
+    font-size: 10px;
+    color: #ccc;
+    user-select: none;
+    padding: 2px;
+    cursor: pointer;
+  }
+
+  .LeftSide .Item .DeleteButton:hover {
+    color: red;
+  }
+  .LeftSide .Typing {
+    /* border:1px dashed blue; */
+    min-height: 100px;
+    height: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+    border-top: 2px dashed #ccc;
+    overflow: hidden !important;
+  }
+  
+  .LeftSide .Typing .Input {
+    flex: 1;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    box-sizing: border-box;
+    z-index: 1;
+    /* margin: 2px; */
+  }
+  .LeftSide .Typing .Button {
+    display: flex;
+    flex-direction: column;
+  }
+  .LeftSide .Button .SentButton {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    box-sizing: border-box;
+    color: rgb(23, 113, 39);
+    box-shadow: 1px 2px 4px #ccc;
+    font-size: large;
+    cursor: pointer;
+  }
+  
+  .LeftSide .Button .Attachments {
+  }
+  
+  .LeftSide .Attachments .Image {
+    font-size: larger;
+    padding: 5px;
+    color: rgba(0, 0, 255, 0.848);
+  }
+  .LeftSide .Attachments .Image:hover {
+    opacity: 0.5;
+  }
+  
+  .LeftSide .Attachments .File {
+    font-size: larger;
+    padding: 5px;
+    color: rgba(255, 60, 0, 0.848);
+  }
+  .LeftSide .Attachments .File:hover {
+    opacity: 0.5;
+  }
+  .LeftSide .Typing .SentButton:active {
+    opacity: 0.5;
+  }
+
+  .LeftSide .ImageContainerOnly{
+    max-width: 80%;
+    padding-top: 5px;
+
+
+  }
+
+  .LeftSide .ImageContainerOnly img{
+    width: 100%;
+    height:100%;
+    border-radius: 10px;
+  }
