@@ -69,7 +69,7 @@ export function LeftSide() {
       <img  src='https://i0.wp.com/picjumbo.com/wp-content/uploads/pure-nature-landscape-single-tree-in-green-field-free-photo.jpg?w=600&quality=80'/>
     </div>
     <div className="FooterItem">
-        <div className="TimeStamp">2023/10/09 14h30</div>
+        <div className="TimeStamp">2023/10/09 14h30 ...</div>
         <FaRegTrashCan className="DeleteButton"/>
     </div>
   </li>
