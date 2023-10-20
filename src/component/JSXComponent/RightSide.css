@@ -20,16 +20,17 @@
     align-items: center;
   }
   
-  .Header .HeaderItem {
+  .RightSide .Header .HeaderItem {
     padding: 10px;
     cursor: pointer;
     font-size: medium;
+    min-width: 60px;
   }
-  .Header .HeaderItem:hover {
+  .RightSide .Header .HeaderItem:hover {
     font-size: large;
   }
   
-  .ImageCatalogs {
+  .RightSide .ImageCatalogs {
     padding: 5px;
     display: flex;
     flex-direction: row;
@@ -41,7 +42,7 @@
     height: 90vh;
   }
   
-  .ImageCatalogs .Item {
+  .RightSide .ImageCatalogs .Item {
     width: 150px;
     height: 150px;
     /* aspect-ratio: 1; */
@@ -53,15 +54,15 @@
     position: relative;
   }
   
-  .ImageCatalogs .Item .Image {
+  .RightSide .ImageCatalogs .Item .Image {
     width: 150px;
     height: 150px;
   }
-  .ImageCatalogs .Item:hover .ImageOverlay {
+  .RightSide .ImageCatalogs .Item:hover .ImageOverlay {
     bottom: 0;
     height: 100%;
   }
-  .ImageOverlay {
+  .RightSide .ImageOverlay {
     position: absolute;
     bottom: 100%;
     left: 0;
@@ -74,7 +75,7 @@
     transition: 0.5s ease;
   }
   
-  .ImageOverlay .ButtonDownload {
+  .RightSide .ImageOverlay .ButtonDownload {
     white-space: nowrap;
     color: white;
     font-size: 20px;
@@ -88,7 +89,7 @@
     user-select: none;
   }
   
-  .ImageOverlay .ButtonDelete {
+  .RightSide .ImageOverlay .ButtonDelete {
     white-space: nowrap;
     color: white;
     font-size: 20px;
@@ -102,7 +103,7 @@
     user-select: none;
   }
   
-  .ImageOverlay .ButtonView {
+  .RightSide .ImageOverlay .ButtonView {
     white-space: nowrap;
     color: white;
     font-size: 20px;
@@ -115,17 +116,17 @@
     cursor: pointer;
     user-select: none;
   }
-  .ImageOverlay .ButtonDownload:hover {
+  .RightSide .ImageOverlay .ButtonDownload:hover {
     color: rgb(4, 255, 0);
   }
-  .ImageOverlay .ButtonDelete:hover {
+  .RightSide .ImageOverlay .ButtonDelete:hover {
     color: rgb(255, 0, 85);
   }
-  .ImageOverlay .ButtonView:hover {
+  .RightSide .RightSide.ImageOverlay .ButtonView:hover {
     color: rgb(0, 30, 255);
   }
   
-  .FileCatalogs {
+  .RightSide .FileCatalogs {
     padding: 5px;
     width: 100%;
     height: 90vh;
@@ -133,7 +134,7 @@
     overflow-y: scroll;
   }
   
-  .FileCatalogs .Item {
+  .RightSide .FileCatalogs .Item {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -141,7 +142,7 @@
     border-bottom: 1px dashed #ccc;
   }
   
-  .FileCatalogs .ItemHead {
+  .RightSide .FileCatalogs .ItemHead {
     display: flex;
     flex-direction: column;
     padding-left: 10px;
@@ -153,16 +154,16 @@
   
   }
   
-  .FileCatalogs .ItemName {
+  .RightSide .FileCatalogs .ItemName {
     flex: 1;
   }
   
-  .FileCatalogs .ItemName{
+  .RightSide .FileCatalogs .ItemName{
     text-align: start;
     padding: 0 10px;
   }
   
-  .FileCatalogs .ItemDownload{
+  .RightSide .FileCatalogs .ItemDownload{
     padding-right: 10px;
     color: green;
     cursor: pointer;
@@ -170,7 +171,7 @@
   
   }
   
-  .FileCatalogs .ItemDelete{
+  .RightSide .FileCatalogs .ItemDelete{
     padding-right: 10px;
     color: rgb(215, 26, 26);
     cursor: pointer;
@@ -178,14 +179,14 @@
   
   }
   
-  .FileCatalogs .ItemDownload:hover{
+  .RightSide .FileCatalogs .ItemDownload:hover{
     color: rgb(43, 228, 43);
   }
-  .FileCatalogs .ItemDelete:hover{
+  .RightSide .FileCatalogs .ItemDelete:hover{
     color: rgb(238, 125, 125);
   }
   
-  .LinkCatalogs {
+  .RightSide .LinkCatalogs {
     padding: 5px;
     width: 100%;
     height: 90vh;
@@ -193,7 +194,7 @@
     overflow-y: scroll;
   }
   
-  .LinkCatalogs .Item{
+  .RightSide .LinkCatalogs .Item{
     width: 100%;
     text-align: start;
     padding:5px;
@@ -202,10 +203,22 @@
     padding-bottom: 7px;
   }
   
-  .LinkCatalogs .Item:hover{
+  .RightSide .LinkCatalogs .Item:hover{
     color: rgb(103, 103, 254);
   
   }
-  .LinkCatalogs .Item a{
+  .RightSide .LinkCatalogs .Item a{
     text-decoration: none;
   }
+
+  .RightSide .TimeStamp {
+    font-style: italic;
+    font-size: 8px;
+    margin: 3px;
+    color: #ccc;
+    user-select: none;
+    flex: 1;
+ 
+  }
+
+  
