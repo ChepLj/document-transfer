@@ -7,7 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-y: hidden;
   box-sizing: border-box;
-  background-color: rgba(210, 239, 237, 0.611);
+  /* background-color: rgba(210, 239, 237, 0.611); */
+  background-color: rgba(23, 47, 45, 0.611);
 }
 
 code {

@@ -1,10 +1,26 @@
-export interface ITF_drawing {
-id: string,
-name: string,
-item?: ITF_drawing[]
+export interface ITF_ObjectFullData{
+  [key:number|string] : ITF_FullData
 }
 
-export interface ITF_drawingContent {}
+export interface ITF_FullData{
+  key: string,
+  bucket:string,
+  date:number,
+  status?: string,
+  content:{
+    type:'text'| 'image' | 'file' |'link' | 'video' | 'other',
+    text: string,
+    images: string[],
+    files: string[],
+    link: string,
+    video: string,
+    other: string,
+  }
+}
+
+export interface ITF_DataType{
+  type: 'text'| 'singeImage' | "multiImage" | 'singeFile' | "multiFile" | 'link' | 'video' | 'other',
+}
 
 export interface ITF_drawingContentItem {
   idCode: string;
@@ -47,47 +63,15 @@ export interface ITF_drawingContentItem {
     fileURL: string,
   };
   available?: string;
-  groupStyle?: ITF_Area;
-  areaField?: ITF_Area;
-  groupField?: ITF_Area;
-  localField?: ITF_Area;
+  groupStyle?: string;
+  areaField?: string;
+  groupField?: string;
+  localField?: string;
   accessRights?: string[],
   
-}
-
-export interface ITF_Area {
-  id: string;
-  name: string;
-}
-
-export interface ITF_TempObject {
-  [key: string]: Array<string>[];
-}
-
-
-export interface ITF_ObjFilter {
-  '01':ITF_ObjFilterArray,
-  '02':ITF_ObjFilterArray,
-  '03':ITF_ObjFilterArray,
-  '04':ITF_ObjFilterArray,
-  '05':ITF_ObjFilterArray,
-
-}
-export interface ITF_ObjFilterArray{
-  New: {key:string,keyChild:string}[],
-  Current: {key:string,keyChild:string}[],
-  id?: string,
-  groupName?: string
 }
 
 export interface ITF_UploadContainer {
   ref: string;
   data: any;
-}
-
-export interface ITF_AuthorLogin {
-  displayName: string;
-  email:string;
-  photoURL:string;
-  provider:string;
 }

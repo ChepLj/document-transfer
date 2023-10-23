@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
-import './RightSide.css'
+import { useEffect, useState } from "react";
+import { ITF_ObjectFullData } from "../../interface/interface";
+import './RightSide.css';
 
 //JSX: Right Side
-export function RightSide() {
+export function RightSide({data}:{data:ITF_ObjectFullData }) {
     const [header, setHeader] = useState("Image");
     useEffect(() => {
       const headerItemElm = document.querySelectorAll(".Header .HeaderItem");
@@ -51,7 +52,7 @@ export function RightSide() {
       <section className="ImageCatalogs">
         {imageArray.map(() => {
           return (
-            <div className="Item">
+            <div className="Item" >
               <img
                 className="Image"
                 src="https://i0.wp.com/picjumbo.com/wp-content/uploads/pure-nature-landscape-single-tree-in-green-field-free-photo.jpg?w=600&quality=80"

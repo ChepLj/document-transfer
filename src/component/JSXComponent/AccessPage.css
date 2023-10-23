@@ -1,0 +1,116 @@
+.AccessPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.AccessPage .ContainerTyping {
+  min-width: 500px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+.AccessPage .TextHeader {
+  font-size: 20px;
+  width: 100%;
+}
+
+.AccessPage .Input {
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px 0;
+  font-size: 20px;
+  color: rgb(186, 3, 3);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.AccessPage .Button {
+  border: 1px solid green;
+  background-color: white;
+  color: green;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.AccessPage .Button:hover {
+  box-shadow: 1px 1px 4px green;
+}
+
+.AccessPage .Button:active {
+  opacity: 0.5;
+}
+
+/* create new */
+
+.AccessPage .ContainerCreateNew {
+  min-width: 500px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  padding: 50px;
+}
+
+.ContainerCreateNew .TextHeader1 {
+  font-size: 20px;
+  width: 100%;
+  color: red;
+}
+.ContainerCreateNew .TextHeader2 {
+  font-size: 20px;
+  width: 100%;
+  /* color: red; */
+}
+.ContainerCreateNew .TextBucket {
+  font-size: 30px;
+  font-weight: 600;
+  color: green;
+  width: 100%;
+  padding: 10px;
+}
+
+.ContainerCreateNew .Input {
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px 0;
+  font-size: 20px;
+  color: rgb(186, 3, 3);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.ContainerCreateNew .ButtonCreateNew {
+  border: 1px solid green;
+  background-color: white;
+  color: green;
+  padding: 10px;
+  cursor: pointer;
+  margin: 20px;
+  display: inline-block;
+  width: 100px;
+}
+
+.ContainerCreateNew .ButtonCreateNew:hover {
+  box-shadow: 1px 1px 4px green;
+}
+
+.ContainerCreateNew .ButtonCreateNew:active {
+  opacity: 0.5;
+}
+.ContainerCreateNew .ButtonBack {
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+  margin: 20px;
+  display: inline-block;
+  width: 100px;
+}

@@ -10,7 +10,7 @@
     padding-bottom: 2px;
     margin-right: 10px;
     border-radius: 10px;
-    background-color: white;
+    background-color: whitesmoke;
   }
   .LeftSide .Contents {
     /* border: 1px dashed red; */
@@ -27,6 +27,7 @@
     box-sizing: border-box;
     overflow-y: auto;
     padding-left: 20px;
+    padding-right: 10px;
     margin: 0;
   }
   .LeftSide .List .Item {
