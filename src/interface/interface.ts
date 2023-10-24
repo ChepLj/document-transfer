@@ -10,14 +10,21 @@ export interface ITF_FullData{
   content:{
     type:'text'| 'image' | 'file' |'link' | 'video' | 'other',
     text: string,
-    images: string[],
-    files: string[],
+    images: ITF_File[],
+    file: ITF_File,
     link: string,
     video: string,
     other: string,
   }
 }
 
+export interface ITF_File{
+  url:string,
+  name:string,
+  size:string|number,
+  type:string,
+  ref:string
+}
 export interface ITF_DataType{
   type: 'text'| 'singeImage' | "multiImage" | 'singeFile' | "multiFile" | 'link' | 'video' | 'other',
 }

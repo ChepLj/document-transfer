@@ -11,7 +11,7 @@ export const handelOpenImageFile = async (callback: Function) => {
       description: "Image files",
       mimeTypes: ["image/jpg", "image/png", "image/gif", "image/webp"],
       extensions: [".jpg", ".jpeg", ".png", ".gif", ".webp"],
-      // multiple: true,
+      multiple: true,
     });
     // console.log("🚀 ~ file: CreatePage.tsx:57 ~ handelOpenFile ~ blob:", blob);
     if (blob) {

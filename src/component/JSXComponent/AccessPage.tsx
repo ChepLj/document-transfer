@@ -94,7 +94,7 @@ function CreateNew({ display, setDisplay, setBucket, setData }: { display: any; 
       <span className="ButtonCreateNew" onClick={handleCreateNew}>
         Tạo mới
       </span>
-      <span className="ButtonBack" onClick={() => setDisplay("input")}>
+      <span className="ButtonBack" onClick={() => setDisplay({container:'input'})}>
         Trở lại
       </span>
     </div>
