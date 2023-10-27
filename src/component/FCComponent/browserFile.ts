@@ -27,22 +27,22 @@ export const handelOpenTextFile = async (callback: Function) => {
   try {
     const blob = await fileOpen({
       description: "Text files",
-      mimeTypes: [
-        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-        "application/msword",
-        "text/plain",
-        "application/pdf",
-        "application/vnd.ms-excel",
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        "application/elk",
-        "image/vnd.dwg",
-        "image/vnd.dxf",
-        "model/vnd.dwf",
-        "application/x-rar-compressed",
-        "application/zip",
-      ],
-      extensions: [".docx", ".doc", ".xls", ".xlsx", ".pdf", ".txt", ".elk", ".dwg", ".dwf", ".dxf", ".rar", ".zip"],
-      // multiple: true,
+      // mimeTypes: [
+      //   "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      //   "application/msword",
+      //   "text/plain",
+      //   "application/pdf",
+      //   "application/vnd.ms-excel",
+      //   "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      //   "application/elk",
+      //   "image/vnd.dwg",
+      //   "image/vnd.dxf",
+      //   "model/vnd.dwf",
+      //   "application/x-rar-compressed",
+      //   "application/zip",
+      // ],
+      // extensions: [".docx", ".doc", ".xls", ".xlsx", ".pdf", ".txt", ".elk", ".dwg", ".dwf", ".dxf", ".rar", ".zip"],
+      multiple: true,
     });
     if (blob) {
       callback(blob);

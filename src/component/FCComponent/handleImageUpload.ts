@@ -2,7 +2,7 @@ import postDataToStorage from "../../api/postDataToStorage";
 import { ITF_Mime, MIMEtype } from "../MIMEtype";
 
 
-export function handleImageUpload (bucket:string, image:File,  childElmProgressId:string ,callbackGetURLDone:Function){
+export function handleImageUpload (bucket:string, image:File,  childElmProgressId:string ,now:number ,callbackGetURLDone:Function){
         //TODO: Set image Progress State
         const setImageProgressState =(progressState:any)=>{
             const childElmProgress = document.getElementById(childElmProgressId) as HTMLProgressElement
@@ -11,7 +11,7 @@ export function handleImageUpload (bucket:string, image:File,  childElmProgressI
         //TODO_END: Set image Progress State
 
         const imageName = image.name
-        const ref = `${bucket}/IMAGE/`;
+        const ref = `${bucket}/IMAGE/${now}/`;
         const temp: string[] = image.name.split(".");
         const tagTemp = temp[temp.length - 1]
         // callback
@@ -23,11 +23,12 @@ export function handleImageUpload (bucket:string, image:File,  childElmProgressI
                 type: tagTemp,
                 size:image.size,
                 ref: ref
+                
             }
             callbackGetURLDone(objectTemp)
             
           } else if (messenger === "Upload Failed") {
-            alert('error')
+            alert('error ' + result)
           }
         };
 
@@ -42,7 +43,7 @@ export function handleImageUpload (bucket:string, image:File,  childElmProgressI
 
         }
         else{
-          postDataToStorage(image, ref, imageName, callback, setImageProgressState);
+          postDataToStorage(image, ref, imageName, callback, setImageProgressState,null);
         }
         
 }

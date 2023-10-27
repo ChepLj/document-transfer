@@ -20,7 +20,11 @@
   font-size: 20px;
   width: 100%;
 }
-
+.AccessPage .DescriptionHeader{
+  font-size: smaller;
+  font-style: italic;
+  color:#b2acac;
+}
 .AccessPage .Input {
   width: 100%;
   margin: 20px 0;

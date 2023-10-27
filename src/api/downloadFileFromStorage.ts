@@ -1,12 +1,12 @@
-import { ref, getDownloadURL } from "firebase/storage";
+import { getDownloadURL, ref } from "firebase/storage";
+import { ITF_File } from "../interface/interface";
 import { storage } from "./firebase/firebaseConfig";
-import { ITF_drawingContentItem } from "../interface/interface";//! sua lai cho nay
-export default function downloadFileFromStorage(item: ITF_drawingContentItem) {
+export default function downloadFileFromStorage(fileObject: ITF_File) {
  
   //TODO: handel download NEW
 
   const handelDownload = () => {
-    const fileReference = ref(storage, item.urlFileStore!.fileURL); // Replace with the path to your file
+    const fileReference = ref(storage, fileObject.url); // Replace with the path to your file
 
     getDownloadURL(fileReference)
       .then((url) => {

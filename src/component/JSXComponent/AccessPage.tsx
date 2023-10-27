@@ -1,13 +1,29 @@
 import { useState } from "react";
 import getDataFromDB from "../../api/getDataFromDB";
 import "./AccessPage.css";
-import { Container } from "react-dom";
+import listStorage from "../../api/calculatorFolderSizeStorage";
 
 function AccessPage({ setBucket, setData }: { setBucket: Function; setData: Function }) {
+
+
   const [display, setDisplay] = useState<{ container: string; bucket?: string }>({ container: "input", bucket: "" });
   const handleAccess = () => {
     const inputElm = document.getElementById("AccessPageInput") as HTMLInputElement;
     const bucketTemp = inputElm.value.toString();
+    const regex = /[^A-Za-z0-9]+/g;
+    //validate
+    const validateInput = (input: string) => {
+      if (input.match(regex)) {
+        alert("Tên BUCKET chỉ bao gồm chữ cái và số, không bao gồm ký tự đặc biệt và khoảng trắng !!!");
+        return false;
+      } else if (!(input.length >= 2 && input.length < 31)) {
+        alert("Độ dài của BUCKET  phải lớn hơn 2 và nhỏ hơn 30 ký tự !!!");
+        return false;
+      } else {
+        return true;
+      }
+    };
+    //------------------
     const callback = (result: any) => {
       if (result.type === "SUCCESSFUL") {
         console.log(result);
@@ -21,7 +37,7 @@ function AccessPage({ setBucket, setData }: { setBucket: Function; setData: Func
       }
     };
     /// get data from server
-    if (bucketTemp) {
+    if (validateInput(bucketTemp)) {
       getDataFromDB(bucketTemp, callback);
     }
   };
@@ -40,6 +56,8 @@ function Input({ handleAccess }: { handleAccess: Function }) {
   return (
     <div className="ContainerTyping">
       <div className="TextHeader">Nhập ID Bucket hoặc tạo mới</div>
+      <div className="DescriptionHeader">( độ dài ký tự phải lớn hơn 1 và nhỏ hơn 30 )</div>
+      <div className="DescriptionHeader">( chỉ bao gồm chữ cái và số, không chứa ký tự đặc biệt và khoảng trắng ! )</div>
       <input
         id="AccessPageInput"
         className="Input"
@@ -94,7 +112,7 @@ function CreateNew({ display, setDisplay, setBucket, setData }: { display: any; 
       <span className="ButtonCreateNew" onClick={handleCreateNew}>
         Tạo mới
       </span>
-      <span className="ButtonBack" onClick={() => setDisplay({container:'input'})}>
+      <span className="ButtonBack" onClick={() => setDisplay({ container: "input" })}>
         Trở lại
       </span>
     </div>

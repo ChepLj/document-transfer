@@ -1,10 +1,9 @@
 import { createContext, useEffect, useState } from "react";
 import "./App.css";
-import { LeftSide } from "./component/JSXComponent/LeftSide";
-import { RightSide } from "./component/JSXComponent/RightSide";
-import { ITF_FullData } from "./interface/interface";
 import getDataFromDB from "./api/getDataFromDB";
 import AccessPage from "./component/JSXComponent/AccessPage";
+import { LeftSide } from "./component/JSXComponent/LeftSide";
+import { RightSide } from "./component/JSXComponent/RightSide";
 
 const MAIN_CONTEXT = createContext({});
 function App() {
@@ -30,7 +29,7 @@ function App() {
       <div className="App">
         {bucket ? (
           <>
-            <LeftSide  data={data}  />
+            <LeftSide  data={data} />
             <RightSide data={data} />
           </>
         ) : (
@@ -41,5 +40,5 @@ function App() {
   );
 }
 
-export  {App, MAIN_CONTEXT};
+export { App, MAIN_CONTEXT };
 

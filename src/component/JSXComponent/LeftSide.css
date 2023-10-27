@@ -11,13 +11,54 @@
     margin-right: 10px;
     border-radius: 10px;
     background-color: whitesmoke;
+    
   }
   .LeftSide .Contents {
     /* border: 1px dashed red; */
     flex: 1;
     padding: 10px;
+    padding-right: 0;
     box-sizing: border-box;
     height: 90%;
+    overflow-x: hidden;
+  }
+  .LeftSide .Header {
+    width: 100%;
+    min-height: 50px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding:5px;
+    /* background-color: #fefbfb; */
+    box-sizing: border-box;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: 0px 6px 4px #ccc;
+  }
+  .LeftSide .Header .Item{
+    border-right: 3px solid #ccc;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .LeftSide .Header .Item .Title{
+    font-size: smaller;
+    font-style: italic;
+  }
+
+  .LeftSide .Header .Item .Bottom{
+    color: green;
+    font-size: large;
+  }
+  .LeftSide .Header .Item .Calculator{
+    color: rgb(40, 136, 40);
+    font-size: smaller;
   }
   .LeftSide .Contents .List {
     /* background-color: #ccc; */
@@ -46,6 +87,7 @@
 
   .LeftSide .Item .TextContainer {
     text-align: start;
+    word-break:break-all;
   }
   .LeftSide .Item .TimeStamp {
     font-style: italic;
@@ -69,17 +111,21 @@
   }
   .LeftSide .Typing {
     /* border:1px dashed blue; */
+
     min-height: 100px;
     height: 10%;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
-    border-top: 2px dashed #ccc;
+    /* border-top: 4px dashed #ccc; */
+    box-shadow: 0px -6px 3px 0px #ccc;
+    /* border: 2px solid black; */
     overflow: hidden !important;
   }
   
   .LeftSide .Typing .Input {
+    resize: none;
     flex: 1;
     height: 100%;
     padding: 10px;
@@ -127,7 +173,7 @@
     opacity: 0.5;
   }
 
-  .LeftSide .ImageContainerOnly{
+  /* .LeftSide .ImageContainerOnly{
     max-width: 60%;
     padding-top: 10px;
 
@@ -138,22 +184,22 @@
     width: 100%;
     height:100%;
     border-radius: 10px;
-  }
+  } */
 
   .LeftSide .ImageContainerMulti{
     max-width: 100%;
     padding-top: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    align-items: start;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
 
 
   }
 
   .LeftSide .ImageContainerMulti img{
-    width: 30%;
+    width: 23%;
     aspect-ratio: 1/1;
     /* height:200px; */
     border-radius: 10px;
@@ -168,7 +214,7 @@
   .LeftSide .FileContainer{
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
 
 
@@ -250,7 +296,7 @@
     opacity: 0.6;
   }
   .LeftSide .ImageContainerMultiWrap{
-    width: 30%;
+    width: 23%;
     aspect-ratio: 1/1;
     /* height:200px; */
     border-radius: 10px;
@@ -262,4 +308,8 @@
   .LeftSide .ImageContainerMultiWrap img{
     width: 100%;
 
+  }
+
+  .hidden {
+    display: none;
   }

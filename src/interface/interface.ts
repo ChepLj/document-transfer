@@ -3,6 +3,7 @@ export interface ITF_ObjectFullData{
 }
 
 export interface ITF_FullData{
+  ref:string,
   key: string,
   bucket:string,
   date:number,
