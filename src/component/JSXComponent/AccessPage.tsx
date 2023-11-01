@@ -41,6 +41,29 @@ function AccessPage({ setBucket, setData }: { setBucket: Function; setData: Func
       getDataFromDB(bucketTemp, callback);
     }
   };
+
+  //!:----------
+// const temp = (bucketTemp:string)=>{
+//   const callback = (result: any) => {
+//     if (result.type === "SUCCESSFUL") {
+//       console.log(result);
+//       setData(result.payload);
+//       setBucket(bucketTemp);
+//     } else {
+//       setDisplay({
+//         container: "createNew",
+//         bucket: bucketTemp,
+//       });
+//     }
+//   };
+//   /// get data from server
+//   getDataFromDB(bucketTemp, callback);
+// }
+
+// temp('1131')
+
+
+  //!:---------------
   return (
     <section className="AccessPage">
       {display.container === "input" && <Input handleAccess={handleAccess} />}

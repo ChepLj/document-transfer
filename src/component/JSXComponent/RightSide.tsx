@@ -6,6 +6,7 @@ import postDataToDB from "../../api/postDataToDB";
 import { ITF_File, ITF_FullData, ITF_ObjectFullData } from "../../interface/interface";
 import { deleteItemObject } from "../FCComponent/deleteItemObject";
 import "./RightSide.css";
+import { Col } from "react-bootstrap";
 
 //JSX: Right Side
 export function RightSide({ data }: { data: ITF_ObjectFullData }) {
@@ -16,16 +17,16 @@ export function RightSide({ data }: { data: ITF_ObjectFullData }) {
       const elm = crr as HTMLElement;
       if (elm.innerHTML === header) {
         elm.style.color = "green";
-        elm.style.fontSize = "larger";
+        elm.style.fontSize = "1.1rem";
       } else {
         elm.style.color = "black";
-        elm.style.fontSize = "medium";
+        elm.style.fontSize = '1rem';
       }
     });
   }, [header]);
 
   return (
-    <section className="RightSide">
+    <Col className="RightSide ms-2 d-md-flex d-none"  md={7} >
       <div className="Header">
         <span className="HeaderItem " onClick={() => setHeader("Image")}>
           Image
@@ -42,7 +43,7 @@ export function RightSide({ data }: { data: ITF_ObjectFullData }) {
         {header === "File" && <FileCatalogs data={data} />}
         {header === "Link" && <LinkCatalogs data={data} />}
       </div>
-    </section>
+    </Col>
   );
 }
 //JSX_END: Right Side

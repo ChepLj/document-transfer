@@ -12,6 +12,7 @@ import { ImageContainer } from "./LeftSideComponent/ImageContainer";
 import { TextContainer } from "./LeftSideComponent/TextContainer";
 import { Typing } from "./LeftSideComponent/Typing";
 import { Header } from "./LeftSideComponent/Header";
+import Col from 'react-bootstrap/Col'
 
 //JSX: Left Side
 export function LeftSide({ data }: { data: ITF_ObjectFullData }) {
@@ -75,7 +76,7 @@ export function LeftSide({ data }: { data: ITF_ObjectFullData }) {
   };
   //TODO_END: handle Drag File
   return (
-    <section className="LeftSide">
+    <Col className="LeftSide " xs={12} md={5}>
       <Header/>
       <div className="Contents" onDrop={handleDropFile} onDragOver={handleDragFile}>
         <ul className="List" id="LeftSideList">
@@ -103,7 +104,7 @@ export function LeftSide({ data }: { data: ITF_ObjectFullData }) {
         </ul>
       </div>
       <Typing />
-    </section>
+    </Col>
   );
 }
 //JSX_END: Left Side

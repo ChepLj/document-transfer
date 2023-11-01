@@ -4,6 +4,9 @@ import getDataFromDB from "./api/getDataFromDB";
 import AccessPage from "./component/JSXComponent/AccessPage";
 import { LeftSide } from "./component/JSXComponent/LeftSide";
 import { RightSide } from "./component/JSXComponent/RightSide";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const MAIN_CONTEXT = createContext({});
 function App() {
@@ -26,9 +29,9 @@ function App() {
   }, [refresh]);
   return (
     <MAIN_CONTEXT.Provider value={{ refresh, setRefresh, bucket }}>
-      <div className="App">
+      <div className="App m-md-3 m-2">
         {bucket ? (
-          <>
+          < >
             <LeftSide  data={data} />
             <RightSide data={data} />
           </>
